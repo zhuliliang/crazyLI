@@ -1,0 +1,32 @@
+name: Agentic CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: corepack enable && pnpm install
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm run e2e || true # placeholder until tests exist
+
+  ui-screenshot-check:
+    needs: lint-test
+    runs-on: ubuntu-latest
+    if: "contains(join(github.event.pull_request.body, ''), 'UI Changes: yes')"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          if ! grep -q "Screenshot" <<< "${{ github.event.pull_request.body }}"; then
+            echo "Missing screenshot for UI changes" >&2
+            exit 1
+          fi

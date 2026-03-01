@@ -1,0 +1,4 @@
+worktrees/
+.clawdbot/logs/
+prompts/*.md
+!.clawdbot/logs/.gitkeep

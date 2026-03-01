@@ -1,0 +1,9 @@
+2026/03/01 04:35:42 server running on :8080
+2026/03/01 04:36:11 [Mac/uqTQSkx8Bx-000001] "POST http://localhost:8080/auth/email/register HTTP/1.1" from [::1]:55606 - 409 25B in 19.102417ms
+2026/03/01 04:36:49 [Mac/uqTQSkx8Bx-000002] "POST http://localhost:8080/auth/email/register HTTP/1.1" from [::1]:55762 - 200 24B in 85.741916ms
+2026/03/01 04:37:05 [Mac/uqTQSkx8Bx-000003] "POST http://localhost:8080/auth/email/login HTTP/1.1" from [::1]:55827 - 200 16B in 87.832042ms
+2026/03/01 04:37:23 [Mac/uqTQSkx8Bx-000004] "GET http://localhost:8080/me HTTP/1.1" from [::1]:55901 - 401 16B in 36.292µs
+2026/03/01 04:37:42 [Mac/uqTQSkx8Bx-000005] "POST http://localhost:8080/auth/email/login HTTP/1.1" from [::1]:55980 - 200 16B in 74.947125ms
+2026/03/01 04:37:56 [Mac/uqTQSkx8Bx-000006] "GET http://localhost:8080/me HTTP/1.1" from [::1]:56033 - 200 124B in 3.472875ms
+2026/03/01 04:39:05 [Mac/uqTQSkx8Bx-000007] "GET http://localhost:8080/me HTTP/1.1" from [::1]:56322 - 401 16B in 14.625µs
+2026/03/01 04:39:05 [Mac/uqTQSkx8Bx-000008] "GET http://localhost:8080/me HTTP/1.1" from [::1]:56322 - 401 16B in 2µs
